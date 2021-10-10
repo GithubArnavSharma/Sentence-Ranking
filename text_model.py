@@ -1,7 +1,7 @@
 import numpy as np
 import tensorflow as tf
-from tensorflow_hub import KerasLayer
 import tensorflow_text as text
+from tensorflow_hub import KerasLayer
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics.pairwise import cosine_similarity
 
