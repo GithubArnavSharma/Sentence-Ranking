@@ -1,6 +1,6 @@
 import numpy as np
 import tensorflow as tf
-import tensorflow_hub as hub
+from tensorflow_hub import KerasLayer
 import tensorflow_text as text
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics.pairwise import cosine_similarity
@@ -9,8 +9,8 @@ bert_model_name = 'small_bert/bert_en_uncased_L-4_H-512_A-8'
 handle_encoder = 'https://tfhub.dev/tensorflow/small_bert/bert_en_uncased_L-4_H-512_A-8/1'
 handle_preprocess = 'https://tfhub.dev/tensorflow/bert_en_uncased_preprocess/3'
 
-bert_model = hub.KerasLayer(handle_encoder)
-bert_preprocess = hub.KerasLayer(handle_preprocess)
+bert_model = KerasLayer(handle_encoder)
+bert_preprocess = KerasLayer(handle_preprocess)
 
 def vectorize_text(text):
   text = [t.lower() for t in text]
