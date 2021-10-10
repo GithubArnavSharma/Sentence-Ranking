@@ -1,5 +1,4 @@
 import numpy as np
-import tensorflow as tf
 import tensorflow_text as text
 from tensorflow_hub import KerasLayer
 from sklearn.preprocessing import MinMaxScaler
